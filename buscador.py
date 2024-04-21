@@ -136,5 +136,4 @@ class Buscador:
             if status:
                 return self.movimientos
             self.movimientos = []
-            self.threshold = self.min_threshold
         return []

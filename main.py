@@ -36,7 +36,6 @@ def generar_heuristica(estado, acciones, movimientos, heuristica=None):
     if heuristica is None:
         heuristica = {estado: 0}
     que = [(estado, 0)]
-    node_count = sum([len(ACCIONES) ** (x + 1) for x in range(movimientos + 1)])
     print("Espere.....")
     processed_nodes = 0
     while True:
