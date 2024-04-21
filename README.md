@@ -1,123 +1,116 @@
-El reporte es meramente técnico y debe incluir los siguientes puntos:
-1. Nombre completo del autor(a)
-    Dayan Aguilar Alcocer
-    
-2. Breve descripción del proyecto
-    El proyecto consta de 3 clases
-    -Cubo: es la clase donde estan todo las funciones que realizan un cubo rubik de estas voy a destacar:
-        -El iniciador que es donde se carga un cubo puede ser desde un estado que se pase y si no se genera un estado el estado esta resuelto
-        -Los movimientos que basicamente son 3
+# Reporte Técnico: Proyecto Cubo Rubik
 
-        ![alt text](image.png)
-        -Mostrar que es un cubo ya formateado para que el usuario entienda cuales son las caras como dice la imagen que son
+## 1. Nombre completo del autor(a)
+Dayan Aguilar Alcocer
 
-            -U:Up(arriba) 
-            -F:Front(frente)
-            -L:Left(izquieda)
-            -R:Right(derecha)
-            -B:Back(atras)
-            -D:Deep(abajo)
-            
-    ![alt text](image-2.png)
-    -Buscador: basicamente es la clase que recibe el cubo en si y nosotros enviamos un cubo y una heuristica que se tiene que generar en un archivo.txt
-    y se envia un diccionario de heuristica tiene 2 algoritmos de busqueda de estado ida_star y el a_star que se explicaran de mejor manera en el paso "5.2"
-    se usa de la siguiente manera:
-    ![alt text](image-3.png)
+## 2. Breve descripción del proyecto
+El proyecto consta de 3 clases:
 
-    -Main: es el main donde se usa todas las funciones 
-    ![alt text](image-5.png)
+- **Cubo**: Es la clase donde se encuentran todas las funciones que realizan un cubo Rubik. Destacan las siguientes:
+   - **Iniciador**: Carga un cubo desde un estado que se pasa como argumento. Si no se proporciona un estado, se genera un estado resuelto.
+   - **Movimientos**: Contiene 3 movimientos principales.
 
-    Esta funcion genera la heuristica y lo pone en un archivo de texto
+   ![Movimientos del cubo](image.png)
 
-    ![alt text](image-4.png)
+   - **Mostrar**: Muestra un cubo ya formateado para que el usuario entienda cuáles son las caras, como se indica en la imagen:
+       - U: Up (arriba)
+       - F: Front (frente)
+       - L: Left (izquierda)
+       - R: Right (derecha)
+       - B: Back (atrás)
+       - D: Deep (abajo)
 
-    Esta funcion agarra los archivos que existen y los convierte en un archvio de texto al 
-    leer el archivo se explicara ahora como es el formato del archivo:
+   ![Caras del cubo](image-2.png)
 
-    ![alt text](image-6.png)
+- **Buscador**: Es la clase que recibe el cubo en sí. Se envía un cubo y una heurística que se tiene que generar en un archivo `.txt`. Se envía un diccionario de heurística y tiene 2 algoritmos de búsqueda de estado: `ida_star` y `a_star` (se explicarán en el paso "5.2"). Se usa de la siguiente manera:
 
+   ![Uso de Buscador](image-3.png)
 
-    Como funciona es de la siguiente manera donde las lineas negras son las caras.
+- **Main**: Es el archivo principal donde se utilizan todas las funciones.
 
-    Y las lineas de colores son las filas
-    ![alt text](image-7.png)
-    
-3. Requerimientos del entorno de programación
+   ![Función en Main](image-5.png)
 
-    --Python 3.11.1
-    
-    --300 a 700 mb de espacio 
+   Esta función genera la heurística y la coloca en un archivo de texto.
 
-    --Visual Studio Code
+   ![Función en Main](image-4.png)
 
-4. Manual de uso
+   Esta función toma los archivos existentes y los convierte en un archivo de texto. Al leer el archivo, se explica el formato:
 
-    Para el manual de hay que seguir los siguientes pasos
+   ![Formato del archivo](image-6.png)
 
-4.1.Formato de codificación para cargar el estado de un cubo desde el archivo de texto
+   El formato funciona de la siguiente manera, donde las líneas negras son las caras y las líneas de colores son las filas:
 
-    Como ya se explico como se usa los cubos con los archivos de texto ahora veremos la funcion y como llamar para ese estado
+   ![Representación del cubo](image-7.png)
 
-![alt text](image-8.png)
+## 3. Requerimientos del entorno de programación
+- Python 3.11.1
+- 300 a 700 MB de espacio en disco
+- Visual Studio Code
 
-4.2.Instrucciones para ejecutar el programa
+## 4. Manual de uso
 
-Una vez creado el cubo con el estado cargado desde un archivo tenemos que usar la clase Buscador ya creada la heuristica y el cubo para 
+### 4.1. Formato de codificación para cargar el estado de un cubo desde el archivo de texto
 
-![alt text](image-9.png)
+Como ya se explicó cómo se usan los cubos con los archivos de texto, veremos la función y cómo llamarla para cargar un estado:
 
-Este es el resultado 
+![Cargar estado desde archivo](image-8.png)
 
-![alt text](image-10.png)
+### 4.2. Instrucciones para ejecutar el programa
 
-5. Diseño e implementación
+Una vez creado el cubo con el estado cargado desde un archivo, tenemos que usar la clase `Buscador` ya creada con la heurística y el cubo:
 
-5.1.Breve descripción de modelo del problema
+![Usar Buscador](image-9.png)
 
-5.2.Explicación y justificación de algoritmo(s), técnicas, heurísticas seleccionadas.
+Este es el resultado:
 
---Para el uso se utilizaron ida_star y a_star para la busqueda de estado y se ve que ida_star es mas optima por el uso de estados grande por que son mas estados a visitar.
+![Resultado](image-10.png)
 
-![alt text](image-12.png)
-IDA* (Iterative Deepening A*) con el umbral simplificado (simplified threshold) es una variante del algoritmo A* que realiza búsquedas incrementales en profundidad controlando el límite de la función heurística. En cada iteración, el umbral se incrementa en el valor mínimo del costo de los nodos no expandidos. Esto garantiza que los nodos con una función heurística menor al umbral sean explorados. El proceso continúa hasta que se encuentra la solución o se supera el umbral global. Este enfoque combina la eficiencia del A* con el espacio de memoria limitado del algoritmo IDA*.
+## 5. Diseño e implementación
 
-![alt text](image-13.png)
+### 5.1. Breve descripción del modelo del problema
 
+### 5.2. Explicación y justificación de algoritmo(s), técnicas, heurísticas seleccionadas
+
+- Para el uso se utilizaron `ida_star` y `a_star` para la búsqueda de estado. Se observa que `ida_star` es más óptima para el uso de estados grandes debido a que son más estados a visitar.
+
+![Comparación ida_star y a_star](image-12.png)
+
+**IDA*** (Iterative Deepening A*) con el umbral simplificado (simplified threshold) es una variante del algoritmo A* que realiza búsquedas incrementales en profundidad controlando el límite de la función heurística. En cada iteración, el umbral se incrementa en el valor mínimo del costo de los nodos no expandidos. Esto garantiza que los nodos con una función heurística menor al umbral sean explorados. El proceso continúa hasta que se encuentra la solución o se supera el umbral global. Este enfoque combina la eficiencia del A* con el espacio de memoria limitado del algoritmo IDA*.
+
+![Explicación IDA*](image-13.png)
 
 El A* es un algoritmo de búsqueda informada que utiliza una función heurística para determinar qué nodos explorar primero. Evalúa los nodos teniendo en cuenta tanto el costo acumulado desde el inicio como una estimación del costo restante hasta el objetivo. Esto permite una búsqueda más eficiente que el enfoque de búsqueda ciega.
 
---La heuristica utilizada se saco del blog de https://towardsdatascience.com/rubiks-cube-solver-96fa6c56fbe4
+- La heurística utilizada se obtuvo del blog [https://towardsdatascience.com/rubiks-cube-solver-96fa6c56fbe4](https://towardsdatascience.com/rubiks-cube-solver-96fa6c56fbe4)
 
-    -La heuristica consta de basicamente generar un archivo que tenga todos los movimientos posible en un rango de 5 movimientos todos los movimientos que se puedan realizar son generados en una base de datos(En mi caso en un archivo txt)
-    Funciona de la siguiente manera:
-    -Primero generamos la heuristica:
-![alt text](image-14.png)
+   - La heurística consiste en generar un archivo que contenga todos los movimientos posibles en un rango de 5 movimientos. Todos los movimientos que se puedan realizar son generados en una base de datos (en este caso, un archivo `.txt`).
+   - Funciona de la siguiente manera:
+       1. Primero, se genera la heurística:
 
-    -De ahi se ve al momento de generar la heuristica se va iterando sobre todas las acciones posibles luego para el calculo de la heuristica se verifica a travez del txt que es un diccionario muestra
-    el estado del cubo y de ahi los movimientos realizados para llegar a ese estado
-![alt text](image-15.png)
+       ![Generar heurística](image-14.png)
 
-    -Ahora para el calculo de la heuristica se calcula con los movimientos utilizados por ejemplo para el A*
-![alt text](image-16.png)
+       2. Durante la generación de la heurística, se itera sobre todas las acciones posibles. Luego, para el cálculo de la heurística, se verifica a través del archivo `.txt` que es un diccionario que muestra el estado del cubo y los movimientos realizados para llegar a ese estado.
 
-    -Como vemos se busca en el dcicionario el valor_h que es el valor de la heuristica si ese valor existe y si no existe se le da el valor de 20 y asi se va iterando.
+       ![Verificar heurística](image-15.png)
 
-5.3.En caso de usar modelos lingüísticos, incluir los prompts clave.
+       3. Ahora, para el cálculo de la heurística, se calcula con los movimientos utilizados, por ejemplo, para el A*:
 
-**6. Trabajo Futuro**
+       ![Cálculo de heurística](image-16.png)
 
-6.1.Lista de tareas inconclusas y/o ideas para continuar con el proyecto
+       4. Como se observa, se busca en el diccionario el valor `valor_h`, que es el valor de la heurística. Si ese valor existe, se utiliza. Si no existe, se le da el valor de 20, y así se va iterando.
 
---Verificacion de aristas: no esta verificado las aristas que cumplan el archivo los cubos se generaron con el metodo mezclar 
-  de la clase Cubo
+### 5.3. En caso de usar modelos lingüísticos, incluir los prompts clave
+No se utilizaron modelos lingüísticos en este proyecto.
 
---La heuristica que es solo con 5 movimientos solo aguanta cubos con 5 movimientos de vez en cuando 6 o 7 pero si le pasamos un cubo
-  con mas de 10 movimientos de seguro no encontrara el camino
-  ![alt text](image-11.png)
+## 6. Trabajo Futuro
 
---Encontrar una forma de hacer la heuristica que no se genere que sea directo del programa
+### 6.1. Lista de tareas inconclusas y/o ideas para continuar con el proyecto
+- **Verificación de aristas**: No está verificado que las aristas cumplan el archivo. Los cubos se generaron con el método `mezclar` de la clase `Cubo`.
+- **Heurística limitada**: La heurística actual solo considera 5 movimientos, por lo que solo es efectiva para cubos con 5 movimientos. Ocasionalmente, puede funcionar con 6 o 7 movimientos, pero si se pasa un cubo con más de 10 movimientos, es probable que no encuentre el camino.
 
---Intentar no utilizar tantos ciclos anidados [REFACTORING]
---Indagar para encontrar mejores heuristicas como la hueristica Kociemba
+   ![Ejemplo de cubo no resuelto](image-11.png)
 
---Hacer que el cubo aguante mas de 5 movimientos.
+- **Generar heurística directamente**: Encontrar una forma de generar la heurística directamente desde el programa, sin necesidad de un archivo externo.
+- **Refactorización**: Intentar no utilizar tantos ciclos anidados y refactorizar el código.
+- **Investigar mejores heurísticas**: Indagar para encontrar mejores heurísticas, como la heurística Kociemba.
+- **Aumentar el límite de movimientos**: Hacer que el cubo aguante más de 5 movimientos.
