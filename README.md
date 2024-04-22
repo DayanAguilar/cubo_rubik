@@ -56,6 +56,7 @@ Como ya se explicó cómo se usan los cubos con los archivos de texto, veremos l
 ![Cargar estado desde archivo](image-8.png)
 
 ### 4.2. Instrucciones para ejecutar el programa
+*Ejecutar el archivo **main.py*** si no se muestran los ***resultados*** a la primera ejecucion por favor vuelva ejecutar el **main.py**
 
 Una vez creado el cubo con el estado cargado desde un archivo, tenemos que usar la clase `Buscador` ya creada con la heurística y el cubo:
 
@@ -68,6 +69,26 @@ Este es el resultado:
 ## 5. Diseño e implementación
 
 ### 5.1. Breve descripción del modelo del problema
+
+-Se usaron 2 clases y 3 funciones que son las principales
+ las clases principales son:
+
+ *--Cubo*
+
+ ![alt text](image-17.png)
+
+ *--Buscador*
+
+ ![alt text](image-18.png)
+
+ *--Funciones*
+
+![alt text](image-19.png)
+
+Todas se conectan es decir la clase `Cubo` se lee con el cargar_desde_archivo y se lo pasa al `Buscador` y se utilizan las 2 funciones para usar la heuristica una que crea la heuristica que es `generar_heuristica` y `leer_heuristica` y se encuentra los caminos como vimos este es un resultado
+
+![alt text](image-20.png)
+
 
 ### 5.2. Explicación y justificación de algoritmo(s), técnicas, heurísticas seleccionadas
 

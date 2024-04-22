@@ -129,7 +129,6 @@ for movimiento in movimientos:
             print(f"Giro profundo : columna({movimiento[1] + 1}) empezando de la cara azul direccion:arriba")
         else:
             print(f"Giro profundo : columna({movimiento[1] + 1}) empezando de la cara azul direccion:abajo")
-        cubo.giro_profundo(movimiento[1], movimiento[2])
-        
+        cubo.giro_profundo(movimiento[1], movimiento[2])    
 # mostramos el cubo resuelto
 cubo.mostrar()
