@@ -82,8 +82,8 @@ def leer_heuristica(archivo):
     return heuristica
 
 
-# Leemos un archivo de texto tenemos 20 usaremos el cubo3
-estado = cargar_desde_archivo("cubo3.txt")
+# Leemos un archivo de texto tenemos 20 usaremos el cubo15
+estado = cargar_desde_archivo("cubo15.txt")
 # Pasamos el estado del cubo2.txt que es "rrrwwewew......." asi son los estados
 cubo = Cubo(estado=estado)
 ACCIONES = [(r, n, d) for r in ['h', 'v', 'p'] for d in [0, 1] for n in
