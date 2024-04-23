@@ -58,6 +58,8 @@ Como ya se explicó cómo se usan los cubos con los archivos de texto, veremos l
 ### 4.2. Instrucciones para ejecutar el programa
 *Ejecutar el archivo **main.py*** si no se muestran los ***resultados*** a la primera ejecucion por favor vuelva ejecutar el **main.py**
 
+**Tarda dependiendo el cubo pero no pasa mas de 5 min en encontrar la solucion**
+
 Una vez creado el cubo con el estado cargado desde un archivo, tenemos que usar la clase `Buscador` ya creada con la heurística y el cubo:
 
 ![Usar Buscador](image-9.png)
