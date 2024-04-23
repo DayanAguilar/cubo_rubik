@@ -106,6 +106,9 @@ El A* es un algoritmo de búsqueda informada que utiliza una función heurístic
 
    - La heurística consiste en generar un archivo que contenga todos los movimientos posibles en un rango de 5 movimientos. Todos los movimientos que se puedan realizar son generados en una base de datos (en este caso, un archivo `.txt`).
    - Funciona de la siguiente manera:
+
+   - *"Para nuestra heurística, adoptaremos un enfoque simple de fuerza bruta y utilizaremos el algoritmo de búsqueda breadth-first para comprobar los nodos. Aquí vamos a almacenar los diferentes estados del cubo y el número de movimientos que tomó para llegar allí desde el cubo resuelto en una tabla hash"*
+
        1. Primero, se genera la heurística:
 
        ![Generar heurística](image-14.png)
@@ -121,7 +124,8 @@ El A* es un algoritmo de búsqueda informada que utiliza una función heurístic
        4. Como se observa, se busca en el diccionario el valor `valor_h`, que es el valor de la heurística. Si ese valor existe, se utiliza. Si no existe, se le da el valor de 20, y así se va iterando.
 
 ### 5.3. En caso de usar modelos lingüísticos, incluir los prompts clave
-No se utilizaron modelos lingüísticos en este proyecto.
+
+***Chatgpt***: para escoger que metodo de busqueda de estado usar que escogio el A* y el IDA*
 
 ## 6. Trabajo Futuro
 
